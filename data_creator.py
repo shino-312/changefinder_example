@@ -2,6 +2,17 @@
 import sys
 import random
 
+def makeDataCore():
+    # Change here if you want to data characteristics
+    # This function must return a list of numeric data
+    sigma = 1.0
+    data_phase1 = addWhiteNoise(makeUniformData(100, 0.0), 0, sigma)
+    data_phase2 = addWhiteNoise(makeSlopeData(30, 0.3, 0.0), 0, sigma)
+    data_phase3 = addWhiteNoise(makeUniformData(100, 9.0), 0, sigma)
+    data = data_phase1 + data_phase2 + data_phase3
+
+    return data
+
 def makeUniformData(length, value):
     return [value]*length
 
@@ -27,11 +38,7 @@ if __name__ == '__main__':
 
     args = sys.argv
     if len(args) == 2:
-        sigma = 1.0
-        data_phase1 = addWhiteNoise(makeUniformData(100, 0.0), 0, sigma)
-        data_phase2 = addWhiteNoise(makeSlopeData(30, 0.3, 0.0), 0, sigma)
-        data_phase3 = addWhiteNoise(makeUniformData(100, 9.0), 0, sigma)
-        data = data_phase1 + data_phase2 + data_phase3
+        data = makeDataCore()
 
         file_name = args[1]
         with open(file_name, 'w') as f:

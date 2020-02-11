@@ -37,7 +37,7 @@ if __name__ == '__main__':
     tester = ChangeFinderTester(data_file)
 
     # Paramter combinations
-    r_list = [0.0008, 0.001, 0.01, 0.1, 0.3]
+    r_list = [0.001, 0.01, 0.1, 0.3]
     order_list = [1, 3, 5]
     smooth_list = [3, 5]
 
