@@ -1,10 +1,10 @@
-# changefinder_sample
+# changefinder_example
 
 Testing script to check behavior of ChangeFinder algorithm.
 
 ## What's this program?
 
-An useful script to run ChangeFinder algorithm with multiple paramters.
+An useful script to run ChangeFinder algorithm with multiple parameters.
 
 ### Tested environment and dependencies
 
@@ -78,11 +78,11 @@ out_sample.dat_0.001000_5_3.png  out_sample.dat_0.010000_5_3.png  out_sample.dat
 out_sample.dat_0.001000_5_5.png  out_sample.dat_0.010000_5_5.png  out_sample.dat_0.100000_5_5.png  out_sample.dat_0.300000_5_5.png
 ```
 
-Output PNG files will be like this.
+### PNG sample
 
 ![output_sample](./out_sample.dat_0.001000_1_3.png)
 
-- ** Anomaly score is normalized into [0.0, 1.0] because its scale drastically changes according to paramters. **
+- Anomaly score is normalized into [0.0, 1.0] because its scale drastically changes according to parameters.
 - Vertical dashed line indicates maximum anomaly score.
 
 ## License
